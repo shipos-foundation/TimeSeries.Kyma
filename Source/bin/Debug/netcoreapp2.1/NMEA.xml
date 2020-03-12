@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RaaLabs.TimeSeries.Kyma</name>
+    </assembly>
+    <members>
+        <member name="T:RaaLabs.TimeSeries.Kyma.Connector">
+            <summary>
+            Represents a <see cref="T:RaaLabs.TimeSeries.Modules.Connectors.IAmAStreamingConnector">streaming connector</see> 
+            </summary>
+        </member>
+        <member name="E:RaaLabs.TimeSeries.Kyma.Connector.DataReceived">
+            <inheritdoc/>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.Connector.#ctor(RaaLabs.TimeSeries.Kyma.ConnectorConfiguration,RaaLabs.TimeSeries.Kyma.ISentenceParser,Dolittle.Logging.ILogger)">
+            <summary>
+            Initializes a new instance of <see cref="T:RaaLabs.TimeSeries.Kyma.Connector"/>
+            </summary>
+            <param name="configuration">The <see cref="T:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration">configuration</see></param>
+            <param name="parser"><see cref="T:RaaLabs.TimeSeries.Kyma.ISentenceParser"/> for parsing the Kyma sentences</param>
+            <param name="logger"><see cref="T:Dolittle.Logging.ILogger"/> for logging</param>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.Connector.Name">
+            <inheritdoc/>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.Connector.Connect">
+            <inheritdoc/>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration">
+            <summary>
+            Represents the configuration for <see cref="T:RaaLabs.TimeSeries.Kyma.Connector"/>
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration.#ctor(System.String,System.Int32,RaaLabs.TimeSeries.Kyma.Protocol)">
+            <summary>
+            Initializes a new instance of <see cref="T:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration"/>
+            </summary>
+            <param name="ip">The IP address for the connector</param>
+            <param name="port">The Port to connect to</param>
+            <param name="protocol"><see cref="P:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration.Protocol"/> to use for connecting</param>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration.Ip">
+            <summary>
+            Gets the Ip address that will be used for connecting
+            </summary>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration.Port">
+            <summary>
+            Gets the port that will be used for connecting
+            </summary>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration.Protocol">
+            <summary>
+            Gets the <see cref="P:RaaLabs.TimeSeries.Kyma.ConnectorConfiguration.Protocol"/> to use
+            </summary>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.InvalidSentence">
+            <summary>
+            Exception that gets thrown if a sentence is in the invalid format
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.InvalidSentence.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:RaaLabs.TimeSeries.Kyma.InvalidSentence"/>
+            </summary>
+            <param name="sentence">The invalid sentence</param>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.InvalidSentenceChecksum">
+            <summary>
+            Exception that gets thrown if a sentence has invalid checksum
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.InvalidSentenceChecksum.#ctor(System.Byte,System.Byte,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:RaaLabs.TimeSeries.Kyma.InvalidSentence"/>
+            </summary>
+            <param name="actualChecksum">The invalid checksum </param>
+            <param name="expectedChecksum">The expected checksum</param>
+            <param name="sentence">The invalid sentence</param>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.ISentenceFormat">
+            <summary>
+            Defines how a format for a sentence is to be parsed
+            </summary>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.ISentenceFormat.Identitifer">
+            <summary>
+            Gets the setence identifier 
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.ISentenceFormat.Parse(System.String[])">
+            <summary>
+            Parse the sentence values and return an instance of a type representing it
+            </summary>
+            <param name="sentence">The values to parse</param>
+            <returns>All the results</returns>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.ISentenceParser">
+            <summary>
+            Defines the parser of sentences
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.ISentenceParser.CanParse(System.String)">
+            <summary>
+            Check if sentence can be parsed
+            </summary>
+            <param name="sentence">Sentence to check</param>
+            <returns>True if it can be parsed, false if not</returns>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.ISentenceParser.Parse(System.String)">
+            <summary>
+            Parse a parseable sentence into its target object
+            </summary>
+            <param name="sentence">Sentence to parse</param>
+            <returns>All the results parsed</returns>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.ParsedResult">
+            <summary>
+            Represents a parsed result
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.ParsedResult.#ctor(System.String,System.Object)">
+            <summary>
+            Initializes a new instance of <see cref="T:RaaLabs.TimeSeries.Kyma.ParsedResult"/>
+            </summary>
+            <param name="type">Type string representing the result</param>
+            <param name="result">The actual result</param>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.ParsedResult.Type">
+            <summary>
+            Gets the type string
+            </summary>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.ParsedResult.Result">
+            <summary>
+            Gets the result
+            </summary>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.Protocol">
+            <summary>
+            The protocol to use for connections
+            </summary>
+        </member>
+        <member name="F:RaaLabs.TimeSeries.Kyma.Protocol.Tcp">
+            <summary>
+            Straight Kyma TCP
+            </summary>
+        </member>
+        <member name="F:RaaLabs.TimeSeries.Kyma.Protocol.Udp">
+            <summary>
+            Straight Kyma UDP 
+            </summary>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.SentenceFormats.IIXDR">
+            <summary>
+            Represents the format of Kyma
+            </summary>
+        </member>
+        <member name="P:RaaLabs.TimeSeries.Kyma.SentenceFormats.IIXDR.Identitifer">
+            <inheritdoc/>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.SentenceFormats.IIXDR.Parse(System.String[])">
+            <inheritdoc/>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.SentenceParser">
+            <summary>
+            Represents an implementation of <see cref="T:RaaLabs.TimeSeries.Kyma.ISentenceParser"/>
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.SentenceParser.#ctor(Dolittle.Types.IInstancesOf{RaaLabs.TimeSeries.Kyma.ISentenceFormat})">
+            <summary>
+            Initializes a new instance <see cref="T:RaaLabs.TimeSeries.Kyma.SentenceParser"/>
+            </summary>
+            <param name="formats">All available <see cref="T:RaaLabs.TimeSeries.Kyma.ISentenceFormat">formats</see></param>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.SentenceParser.CanParse(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.SentenceParser.Parse(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:RaaLabs.TimeSeries.Kyma.UnsupportedSentence">
+            <summary>
+            Exception that gets thrown if a sentence is not supported
+            </summary>
+        </member>
+        <member name="M:RaaLabs.TimeSeries.Kyma.UnsupportedSentence.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:RaaLabs.TimeSeries.Kyma.UnsupportedSentence"/>
+            </summary>
+            <param name="sentence">Unsupported sentence</param>
+            <param name="talker">Talker that is not supported</param>
+            <param name="identifier">Identifier that is not supported</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,12 @@
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/bin/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.deps.json
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/bin/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.runtimeconfig.json
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/bin/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.runtimeconfig.dev.json
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/bin/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.dll
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/bin/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.pdb
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/obj/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.dll
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/obj/Debug/netcoreapp2.1/RaaLabs.TimeSeries.Kyma.pdb
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/bin/Debug/netcoreapp2.1/NMEA.xml
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/obj/Debug/netcoreapp2.1/NMEA.csprojAssemblyReference.cache
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/obj/Debug/netcoreapp2.1/NMEA.csproj.CoreCompileInputs.cache
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/obj/Debug/netcoreapp2.1/NMEA.AssemblyInfoInputs.cache
+/Users/sigbjorn/Documents/Raa/IotEdge/TimeSeries.Kyma/Source/obj/Debug/netcoreapp2.1/NMEA.AssemblyInfo.cs
